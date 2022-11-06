@@ -54,7 +54,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/C
 }
 FreeTab:Button{
 	Name = "Memeus 2.5",
-	Description = "Controls: SO MANY CONTROLS",
+	Description = "Controls: SO MANY CONTROLS (Broken ATM)",
 	Callback = function() 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Memus%202.5"))()
     end
