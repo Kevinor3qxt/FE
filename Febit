@@ -14,7 +14,7 @@ local PaidTab = GUI:Tab{
 	Icon = "rbxassetid://8569322835"
 }
 local FreeTab = GUI:Tab{
-	Name = "Free Scripts",
+	Name = "R15/R6",
 	Icon = "rbxassetid://8569322835"
 }
 ReTab:Button{
@@ -33,28 +33,28 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/R
 }
 FreeTab:Button{
 	Name = "Meme animations",
-	Description = "Controls: T for madness and F for idk and G for idk",
+	Description = "Controls: T for madness and F for idk and G for idk R15 and R6",
 	Callback = function() 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Meme%20animations"))()
     end
 }
 FreeTab:Button{
 	Name = "Undertale",
-	Description = "Controls: Q Single Gaster Blaster Z Double X Massive",
+	Description = "Controls: Q Single Gaster Blaster Z Double X Massive R15 and R6",
 	Callback = function() 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/UnderTale"))()
     end
 }
 FreeTab:Button{
 	Name = "Ender 2.0",
-	Description = "Controls: SO MANY CONTROLS",
+	Description = "Controls: SO MANY CONTROLS R15 and R6",
 	Callback = function() 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Cool"))()
     end
 }
 FreeTab:Button{
 	Name = "Memeus 2.5",
-	Description = "Controls: SO MANY CONTROLS (Broken ATM)",
+	Description = "Controls: SO MANY CONTROLS R6 only",
 	Callback = function() 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Memus%202.5"))()
     end
