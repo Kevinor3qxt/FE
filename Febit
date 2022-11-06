@@ -1,0 +1,68 @@
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+local GUI = Mercury:Create{
+    Name = "Febit",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://febit.xyz/WWWWW"
+}
+local ReTab = GUI:Tab{
+	Name = "Reanimations",
+	Icon = "rbxassetid://8569322835"
+}
+local PaidTab = GUI:Tab{
+	Name = "Paid Scripts (Work in progress)",
+	Icon = "rbxassetid://8569322835"
+}
+local FreeTab = GUI:Tab{
+	Name = "Free Scripts",
+	Icon = "rbxassetid://8569322835"
+}
+ReTab:Button{
+	Name = "Simple Reanimate R6",
+	Description = "The Simple reanimate",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Simple%20Reanimate"))()
+    end
+}
+ReTab:Button{
+	Name = "R15",
+	Description = "R15 to R6 Powerful",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/R15%20Reanimate"))()
+    end
+}
+FreeTab:Button{
+	Name = "Meme animations",
+	Description = "Controls: T for madness and F for idk and G for idk",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Meme%20animations"))()
+    end
+}
+FreeTab:Button{
+	Name = "Undertale",
+	Description = "Controls: Q Single Gaster Blaster Z Double X Massive",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/UnderTale"))()
+    end
+}
+FreeTab:Button{
+	Name = "Ender 2.0",
+	Description = "Controls: SO MANY CONTROLS",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Cool"))()
+    end
+}
+FreeTab:Button{
+	Name = "Memeus 2.5",
+	Description = "Controls: SO MANY CONTROLS",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Memus%202.5"))()
+    end
+}
+PaidTab:Button{
+	Name = "Nep V",
+	Description = "Its a work in progress so right now just animations",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Memus%202.5"))()
+    end
+}
