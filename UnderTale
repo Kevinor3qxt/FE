@@ -975,113 +975,11 @@ end
 
 
 function DealDamage(who,minDam,maxDam,Knock,Type,critChance,critMult)
-	if(who)then
-		local hum = who:FindFirstChildOfClass'Humanoid'
-		local Damage = M.RNG(minDam,maxDam)
-		local canHit = true
-		if(hum)then
-			for _, p in pairs(Hit) do
-				if p[1] == hum then
-					if(time() - p[2] < 0.01) then
-						canHit = false
-					else
-						Hit[_] = nil
-					end
-				end
-			end
-			if(canHit)then
-				table.insert(Hit,{hum,time()})
-				if(hum.Health >= math.huge)then
-					who:BreakJoints()
-					if(who:FindFirstChild'Head' and hum.Health > 0)then
-						ShowDamage((who.Head.CFrame * CF.N(0, 0, (who.Head.Size.Z / 2)).p+V3.N(0,1.5,0)+V3.N(M.RNG(-2,2),0,M.RNG(-2,2))), "INSTANT", 1.5, C3.N(1,0,0))
-					end
-				else
-					local player = S.Players:GetPlayerFromCharacter(who)
-					if(Type == "Fire")then
-						--idk..
-					else
-						local  c = Instance.new("ObjectValue",hum)
-						c.Name = "creator"
-						c.Value = Plr
-						game:service'Debris':AddItem(c,0.35)
-						if(M.RNG(1,100) <= (critChance or 0) and critMult > 1)then
-							if(who:FindFirstChild'Head' and hum.Health > 0)then
-								ShowDamage((who.Head.CFrame * CF.N(0, 0, (who.Head.Size.Z / 2)).p+V3.N(0,1.5,0)+V3.N(M.RNG(-2,2),0,M.RNG(-2,2))), "[CRIT] "..Damage*(critMult or 2), 1.5, BrickColor.new'New Yeller'.Color)
-							end
-							hum.Health = hum.Health - Damage*(critMult or 2)
-						else
-							if(who:FindFirstChild'Head' and hum.Health > 0)then
-								ShowDamage((who.Head.CFrame * CF.N(0, 0, (who.Head.Size.Z / 2)).p+V3.N(0,1.5,0)+V3.N(M.RNG(-2,2),0,M.RNG(-2,2))), Damage, 1.5, DamageColor.Color)
-							end
-							hum.Health = hum.Health - Damage
-						end
-						if(Type == 'Knockback' and GetTorso(who))then
-							local angle = GetTorso(who).Position - Root.Position + Vector3.new(0, 0, 0).unit
-							local body = NewInstance('BodyVelocity',GetTorso(who),{
-								P = 500,
-								maxForce = V3.N(math.huge,0,math.huge),
-								velocity = Root.CFrame.lookVector * Knock + Root.Velocity / 1.05
-							})
-							game:service'Debris':AddItem(body,.5)
-						elseif(Type == "Electric")then
-							if(M.RNG(1,100) >= critChance)then
-								if(who:FindFirstChild'Head' and hum.Health > 0)then
-									ShowDamage((who.Head.CFrame * CF.N(0, 0, (who.Head.Size.Z / 2)).p+V3.N(0,1.5,0)+V3.N(M.RNG(-2,2),0,M.RNG(-2,2))), "[PARALYZED]", 1.5, BrickColor.new"New Yeller".Color)
-								end
-								local asd = hum.WalkSpeed/2
-								hum.WalkSpeed = asd
-								local paralyzed = true
-								coroutine.wrap(function()
-									while paralyzed do
-										swait(25)
-										if(M.RNG(1,25) == 1)then
-											if(who:FindFirstChild'Head' and hum.Health > 0)then
-												ShowDamage((who.Head.CFrame * CF.N(0, 0, (who.Head.Size.Z / 2)).p+V3.N(0,1.5,0)+V3.N(M.RNG(-2,2),0,M.RNG(-2,2))), "[STATIC]", 1.5, BrickColor.new"New Yeller".Color)
-											end
-											hum.PlatformStand = true
-										end
-									end
-								end)()
-								delay(4, function()
-									paralyzed = false
-									hum.WalkSpeed = hum.WalkSpeed + asd
-								end)
-							end
-							
-						elseif(Type == 'Knockdown' and GetTorso(who))then
-							local rek = GetTorso(who)
-							hum.PlatformStand = true
-							delay(1,function()
-								hum.PlatformStand = false
-							end)
-							local angle = (GetTorso(who).Position - (Root.Position + Vector3.new(0, 0, 0))).unit
-							local bodvol = NewInstance("BodyVelocity",rek,{
-								velocity = angle * Knock,
-								P = 5000,
-								maxForce = Vector3.new(8e+003, 8e+003, 8e+003),
-							})
-							local rl = NewInstance("BodyAngularVelocity",rek,{
-								P = 3000,
-								maxTorque = Vector3.new(500000, 500000, 500000) * 50000000000000,
-								angularvelocity = Vector3.new(math.random(-10, 10), math.random(-10, 10), math.random(-10, 10)),
-							})
-							game:GetService("Debris"):AddItem(bodvol, .5)
-							game:GetService("Debris"):AddItem(rl, .5)
-						end
-					end
-				end
-			end
-		end
-	end
+	
 end
 
 function AOEDamage(where,range,minDam,maxDam,Knock,Type,critChance,critMult)
-	for _,v in next, getRegion(where,range,{Char}) do
-		if(v.Parent and v.Parent:FindFirstChildOfClass'Humanoid')then
-			coroutine.wrap(function() for i = 1, M.RNG(minDam,maxDam) do swait() DealDamage(v.Parent,1,1,Knock,Type,0,1) end end)()
-		end
-	end
+	
 end
 
 function AOEHeal(where,range,amount)
