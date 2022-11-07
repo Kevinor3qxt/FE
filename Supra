@@ -1,0 +1,71 @@
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+local GUI = Mercury:Create{
+    Name = "Supra",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Rust,
+    Link = "https://SupraIsAW.com"
+}
+local ReTab = GUI:Tab{
+	Name = "Reanimations",
+	Icon = "rbxassetid://8569322835"
+}
+local FeTab = GUI:Tab{
+	Name = "Animations",
+	Icon = "rbxassetid://8569322835"
+}
+ReTab:Button{
+	Name = "Simple R6 Reanimate",
+	Description = "Credits to MyWorld Reanimation",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Simple%20Reanimate"))()
+    end
+}
+ReTab:Button{
+	Name = "Simple R15 Reanimate",
+	Description = "Credits to MyWorld Reanimation (Turns you to R6)",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/R15%20Reanimate"))()
+    end
+}
+FeTab:Button{
+	Name = "Meme Animations",
+	Description = "F to say slap my hand wtf T for tons of shit H for hmm maybe And B to shoot laser",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Meme%20animations"))()
+    end
+}
+FeTab:Button{
+	Name = "Memeus 2.5",
+	Description = "So Much Controls sorry",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Memus%202.5"))()
+    end
+}
+FeTab:Button{
+	Name = "Undertale",
+	Description = "X for mega blast Z for double blast and Q for single blast",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/UnderTale"))()
+    end
+}
+FeTab:Button{
+	Name = "Ender 2,0 IDFK",
+	Description = "So many controls",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Cool"))()
+    end
+}
+FeTab:Button{
+	Name = "Krystal Dance V2",
+	Description = "q,e,r,t,y,u,p,f,g,h,j,k",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/Krystaldancev2"))()
+    end
+}
+FeTab:Button{
+	Name = "Gale Fighter",
+	Description = "Too lazy but theres not much controls",
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FE/main/GF"))()
+    end
+}
